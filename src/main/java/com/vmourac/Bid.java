@@ -1,14 +1,11 @@
 package com.vmourac;
 
-import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class Bid {
   private int id;
   private double ammount;
 
-  private static DecimalFormat df2 = new DecimalFormat("#.##");
-  
   public Bid(int id, double ammount) {
     this.id = id;
     this.ammount = ammount;
