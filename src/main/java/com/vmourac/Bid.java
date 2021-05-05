@@ -14,12 +14,15 @@ public class Bid {
   public int getId() {
     return id;
   }
+
   public double getAmmount() {
     return ammount;
   }
+
   public void setAmmount(double ammount) {
     this.ammount = ammount;
   }
+
   public void setId(int id) {
     this.id = id;
   }
@@ -29,17 +32,18 @@ public class Bid {
     return "ID: " + this.getId() + " - Bid: " + String.format("%.2f", this.getAmmount());
   }
 
-
   @Override
   public boolean equals(Object o) {
-      if (this == o) return true;
-      if (o == null || getClass() != o.getClass()) return false;
-      Bid bid = (Bid) o;
-      return Double.compare(bid.ammount, ammount) == 0;
+    if (this == o)
+      return true;
+    if (o == null || getClass() != o.getClass())
+      return false;
+    Bid bid = (Bid) o;
+    return Double.compare(bid.ammount, ammount) == 0;
   }
 
   @Override
   public int hashCode() {
-      return Objects.hash(ammount);
+    return Objects.hash(ammount);
   }
 }
